@@ -20,9 +20,9 @@ class ViewController: UIViewController {
         
         // Forward Geocoding
         let addr = "부산광역시 양정동 429-19"
-        let geoCoder = CLGeocoder()
+        let fgeoCoder = CLGeocoder()
         
-        geoCoder.geocodeAddressString(addr, completionHandler: { placemarks, error in
+        fgeoCoder.geocodeAddressString(addr, completionHandler: { placemarks, error in
             
             if error != nil {
                 print(error!)
@@ -62,14 +62,15 @@ class ViewController: UIViewController {
 //        })
         
         // trailing closure
-        geoCoder.reverseGeocodeLocation(location) { (placemarks: [CLPlacemark]?, error: Error?) in
+        let rgeoCoder = CLGeocoder()
+        rgeoCoder.reverseGeocodeLocation(location) { (placemarks: [CLPlacemark]?, error: Error?) in
             if error != nil {
                 print("Unable to Reverse Geocodin Location \(error!)")
             }
             
             if let myPlacemark = placemarks {
                 let placemark = myPlacemark[0]
-                print(placemark.locality)
+                print(placemark.administrativeArea)
             }
         }
     }
