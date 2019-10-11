@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0551CB662350431200079D2A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0551CB652350431200079D2A /* CoreLocation.framework */; };
 		05A8CE2F234AF76900E63627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8CE2E234AF76900E63627 /* AppDelegate.swift */; };
 		05A8CE31234AF76900E63627 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8CE30234AF76900E63627 /* ViewController.swift */; };
 		05A8CE34234AF76900E63627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05A8CE32234AF76900E63627 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0551CB652350431200079D2A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		05A8CE2B234AF76900E63627 /* SimpleGeoCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleGeoCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05A8CE2E234AF76900E63627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05A8CE30234AF76900E63627 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0551CB662350431200079D2A /* CoreLocation.framework in Frameworks */,
 				05A8CE42234AF8B500E63627 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		05A8CE40234AF8B500E63627 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0551CB652350431200079D2A /* CoreLocation.framework */,
 				05A8CE41234AF8B500E63627 /* MapKit.framework */,
 			);
 			name = Frameworks;

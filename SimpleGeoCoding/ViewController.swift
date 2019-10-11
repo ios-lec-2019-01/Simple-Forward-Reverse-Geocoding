@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+//import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
             
             if let myPlacemark = placemarks {
                 let myPlacemark = myPlacemark[0]
-                print(myPlacemark.location!)
+                //print(myPlacemark.location!)
                 
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = myPlacemark.location!.coordinate
@@ -68,7 +69,7 @@ class ViewController: UIViewController {
             
             if let myPlacemark = placemarks {
                 let placemark = myPlacemark[0]
-                print(placemark)
+                print(placemark.locality)
             }
         }
     }
