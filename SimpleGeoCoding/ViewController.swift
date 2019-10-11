@@ -48,17 +48,29 @@ class ViewController: UIViewController {
         let lng = 129.07284610
         let location = CLLocation(latitude: lat, longitude: lng)
         
-        geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
-            
+//        geoCoder.reverseGeocodeLocation(location, completionHandler: { placemarks, error in
+//
+//            if error != nil {
+//                print(error!)
+//            }
+//
+//            if let myPlacemark = placemarks {
+//                let placemark = myPlacemark[0]
+//                print(placemark.location!)
+//            }
+//        })
+        
+        // trailing closure
+        geoCoder.reverseGeocodeLocation(location) { (placemarks: [CLPlacemark]?, error: Error?) in
             if error != nil {
-                print(error!)
+                print("Unable to Reverse Geocodin Location \(error!)")
             }
             
             if let myPlacemark = placemarks {
                 let placemark = myPlacemark[0]
-                print(placemark.location!)
+                print(placemark)
             }
-        })
+        }
     }
 }
 
